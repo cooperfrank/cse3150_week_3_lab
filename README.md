@@ -26,13 +26,13 @@ and a variable int size tracking the number of stored readings.
 4. `double average(const double values[], int size);`
 5. `double minValue(const double values[], int size);`
 6. `double maxValue(const double values[], int size);`
-    * For each of these, throw `std::string(" Empty ")` if `size==0`.
+    * For each of these, throw `std::string(" Empty ")` if size==0.
 
 ### Menu-Driven main()
 Implement a loop with switch that supports:
 1. Add reading: prompt for label and value, then call addReading.
-2. Update by index: prompt for an index. If out of range, throw `std::string(" Bad index ")`. Otherwise obtain a pointer to that element (&values[index]) and call updateValue.
-3. Print all: iterate and call printReading.
+2. Update by index: prompt for an index. If out of range, throw `std::string(" Bad index ")`. Otherwise obtain a pointer to that element (`&values[index]`) and call updateValue.
+3. Print all: iterate and call `printReading`.
 4. Compute aggregate:
     * Submenu: 1=avg, 2=min, 3=max
     * Directly call the chosen function and print the result.
