@@ -43,8 +43,7 @@ Error Handling Wrap menu actions with try/catch(`const std::string&`) and print 
 
 ### Deliverables
 * Split your code into headers, .cpp files, and your main.cpp file. Put your headers under an include directory, your implementations in a .cpp file in src, and your main.cpp file in src.
-* Initialize your github repo under cse3150 week 3 lab and push the starter code
-* Checkout a new branch for your work called feature 123 and push updates to there. You can checkout a new branch using `git checkout -b branch name`
-• When you’re done, make a pull request on GitHub and merge everything
-to the main branch (the branch name of the main branch is irrelevant).
-Make sure your code compiles and passes tests
+* Initialize your github repo under cse3150_week_3_lab and push the starter code
+* Checkout a new branch for your work called feature_123 and push updates to there. You can checkout a new branch using `git checkout -b branch name`
+* When you’re done, make a pull request on GitHub and merge everythingto the main branch (the branch name of the main branch is irrelevant).
+* Make sure your code compiles and passes tests
