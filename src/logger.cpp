@@ -7,28 +7,69 @@
 void addReading(const std::string& label, double value,
                 std::string labels[], double values[],
                 int& size, int capacity) {
-    // TODO: throw "Full" if size == capacity, else insert and ++size
+    if (size == capacity) {
+        throw std::string("Full");
+    }
+
+    labels[size] = label;
+    values[size] = value;
+
+    size++;
 }
 
 void updateValue(double* valuePtr, double newValue) {
-    // TODO: write through pointer
+    *valuePtr = newValue;
 }
 
 void printReading(const std::string& label, const double& value) {
-    // TODO: pretty-print one reading
+    std::cout << label << ": " << value;
 }
 
 double average(const double values[], int size) {
-    // TODO: throw "Empty" if size==0, else compute average
-    return 0.0;
+    if (size == 0) {
+        throw std::string("Empty");
+    }
+
+    // Compute average
+    double total = 0.0;
+
+    for (int i = 0; i < size; i++) {
+        total += values[i];
+    }
+
+    return total / size;
 }
 
 double minValue(const double values[], int size) {
-    // TODO: throw "Empty" if size==0, else compute min
-    return 0.0;
+    if (size == 0) {
+        throw std::string("Empty");
+    }
+
+    // Compute min
+    double min_val = values[0];
+
+    for (int i = 0; i < size; i++) {
+        if (values[i] < min_val) {
+            min_val = values[i];
+        }
+    }
+
+    return min_val;
 }
 
 double maxValue(const double values[], int size) {
-    // TODO: throw "Empty" if size==0, else compute max
-    return 0.0;
+    if (size == 0) {
+        throw std::string("Empty");
+    }
+
+    // Compute max
+    double max_val = values[0];
+
+    for (int i = 0; i < size; i++) {
+        if (values[i] > max_val) {
+            max_val = values[i];
+        }
+    }
+
+    return max_val;
 }

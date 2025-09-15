@@ -47,3 +47,8 @@ Error Handling Wrap menu actions with try/catch(`const std::string&`) and print 
 * Checkout a new branch for your work called feature_123 and push updates to there. You can checkout a new branch using `git checkout -b branch name`
 * When you’re done, make a pull request on GitHub and merge everythingto the main branch (the branch name of the main branch is irrelevant).
 * Make sure your code compiles and passes tests
+
+## Compilation
+To compile the program, run the following command from the root directory of the repository:
+```bash
+c++ -std=c++17 src/*.cpp -I include/ -o build/logger
